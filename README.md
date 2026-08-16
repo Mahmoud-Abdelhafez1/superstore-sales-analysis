@@ -69,18 +69,21 @@ The analysis looks at different business questions, such as:
 * How does discount relate to profit?
 * How long does it usually take to ship an order?
 * What are the relationships between sales, profit, quantity, and discount?
-
+  
 ## Key Performance Indicators
 
-The project also includes a KPI summary covering important metrics such as:
+Here are the main KPIs from the analysis:
 
-* Total Sales
-* Total Profit
-* Average Discount
-* Top Performing Category
+| KPI | Value |
+|---|---:|
+| Total Sales | $2,261,536.78 |
+| Total Profit | $248,940.99 |
+| Profit Margin | 11.01% |
+| Total Orders | 5,009 |
+| Average Discount | 16% |
+| Top Category | Technology |
 
-These KPIs provide a quick overview of the overall business performance.
-
+These KPIs give a quick overview of the overall business performance.
 ## Visualizations
 
 Several visualizations were created using **Matplotlib** and **Seaborn** to make the analysis easier to understand.
