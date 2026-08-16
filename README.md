@@ -145,7 +145,14 @@ Instead, the outliers were reviewed as part of the analysis.
 ```text
 superstore-sales-analysis/
 │
-├── Sample - Superstore 2019.xls
+├── data/
+│   └── Sample - Superstore 2019.xls
+│
+├── images/
+│   ├── Dashboard_1.png
+│   ├── Dashboard_2.png
+│   └── Dashboard_3.png
+│
 ├── superstore_sales_analysis.ipynb
 ├── README.md
 └── requirements.txt
