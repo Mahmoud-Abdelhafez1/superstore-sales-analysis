@@ -105,13 +105,13 @@ Based on the analysis, several interesting patterns were identified:
 ### Dashboard Preview
 
 #### Dashboard 1
-![Dashboard 1](images/Dashboard1.png)
+![Dashboard 1](images/Dashbord1.png)
 
 #### Dashboard 2
-![Dashboard 2](images/Dashboard2.png)
+![Dashboard 2](images/Dashbord2.png)
 
 #### Dashboard 3
-![Dashboard 3](images/Dashboard3.png)
+![Dashboard 3](images/Dashbord3.png)
 
 Several visualizations were created using **Matplotlib** and **Seaborn** to make the analysis easier to understand.
 
