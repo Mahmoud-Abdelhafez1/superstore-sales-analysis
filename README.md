@@ -2,7 +2,7 @@
 
 This project is a practical data analysis project using the **Sample Superstore 2019** dataset.
 
-The main goal of the project is to explore sales and profit data, clean and prepare the dataset, and find useful insights that can help understand the business performance.
+The main goal of the project is to explore sales and profit data, prepare the dataset, and identify useful business insights using Python.
 
 ## About the Project
 
@@ -10,13 +10,14 @@ I worked with the Superstore dataset to analyze different aspects of the busines
 
 * Sales and profit performance
 * Product categories and sub-categories
-* Yearly sales trends
+* Yearly and monthly sales trends
 * Discounts and their relationship with profit
 * Shipping time
 * Sales and profit distributions
-* Correlations between important numerical variables
+* Correlations between numerical variables
+* Regional sales performance
 
-The project was built using Python and focuses on applying data analysis concepts to a realistic business dataset.
+The project focuses on applying data analysis concepts to a realistic business dataset and turning the data into meaningful insights.
 
 ## Tools & Technologies
 
@@ -31,7 +32,7 @@ The project was built using Python and focuses on applying data analysis concept
 
 The project uses the **Sample Superstore 2019** dataset.
 
-The dataset contains information about orders, customers, products, sales, discounts, profit, shipping dates, and other business-related attributes.
+The dataset contains information about orders, customers, products, sales, discounts, profit, shipping dates, regions, and other business-related attributes.
 
 It contains **9,994 records and 21 columns**.
 
@@ -40,13 +41,13 @@ It contains **9,994 records and 21 columns**.
 Before starting the analysis, I performed several data preparation steps, including:
 
 * Checking the dataset structure
-* Handling missing values
+* Checking and handling missing values
 * Converting date columns to the correct format
-* Creating new features from the order date
-* Calculating shipping days
 * Checking data types
 * Checking for duplicate records
-* Checking for outliers
+* Creating new features from the order date
+* Calculating shipping days
+* Detecting outliers
 * Optimizing memory usage where possible
 
 Some additional features were created, such as:
@@ -60,62 +61,84 @@ Some additional features were created, such as:
 
 ## Analysis
 
-The analysis looks at different business questions, such as:
+The analysis focuses on several business questions, such as:
 
 * Which categories generate the highest sales?
 * Which categories generate the highest profit?
-* How do sales change over time?
+* How do sales and profit change over time?
 * Which sub-categories perform better?
 * How does discount relate to profit?
 * How long does it usually take to ship an order?
-* What are the relationships between sales, profit, quantity, and discount?
-  
+* Which regions contribute the most to sales?
+* What are the relationships between sales, profit, quantity, discount, and shipping days?
+
 ## Key Performance Indicators
 
 Here are the main KPIs from the analysis:
 
-| KPI | Value |
-|---|---:|
-| Total Sales | $2,261,536.78 |
-| Total Profit | $248,940.99 |
-| Profit Margin | 11.01% |
-| Total Orders | 5,009 |
-| Average Discount | 16% |
-| Top Category | Technology |
+| KPI              |         Value |
+| ---------------- | ------------: |
+| Total Sales      | $2,297,200.86 |
+| Total Profit     |   $286,397.02 |
+| Profit Margin    |        12.47% |
+| Total Orders     |         5,009 |
+| Average Discount |           16% |
+| Top Category     |    Technology |
 
-These KPIs give a quick overview of the overall business performance.
+These KPIs provide a quick overview of the overall business performance.
+
+## Key Insights
+
+Based on the analysis, several interesting patterns were identified:
+
+* **Technology is the strongest category**, contributing around 36.4% of total sales and generating the highest profit.
+
+* **The West region has the largest share of sales**, accounting for approximately 31.6% of total sales.
+
+* **Higher discounts are generally associated with lower profit**, with a negative correlation of about -0.22 between Discount and Profit.
+
+* **Business performance improved over time**, with 2019 recording the highest annual sales and profit in the dataset.
+
+* **High sales do not always mean high profit.** For example, Tables generated high sales but recorded a negative total profit, while Copiers achieved both strong sales and profit.
+
 ## Visualizations
 
 Several visualizations were created using **Matplotlib** and **Seaborn** to make the analysis easier to understand.
 
-Examples include:
+The project includes visualizations such as:
 
 * Sales by Category
 * Profit by Category
 * Sales by Year
-* Sub-category Performance
-* Sales Distribution
-* Profit Distribution
-* Shipping Days Analysis
+* Profit by Year
+* Sales by Month
+* Profit by Month
+* Sales by Region
+* Sales by Sub-Category
+* Profit by Sub-Category
+* Profit Margin by Category
+* Sales and Profit Distributions
+* Average Profit by Shipping Days
+* Average Profit by Discount
 * Correlation Heatmap
 
 ## Outliers
 
 Outliers were identified using the **IQR method**.
 
-I did not simply remove all outliers because some of them represent real business transactions with unusually high sales or profit values.
+I did not automatically remove all outliers because some of them represent real business transactions with unusually high sales or profit values.
 
-Instead, they were analyzed as part of the dataset.
+Instead, the outliers were reviewed as part of the analysis.
 
 ## Project Structure
 
 ```text
 superstore-sales-analysis/
 │
+├── Sample - Superstore 2019.xls
 ├── superstore_sales_analysis.ipynb
 ├── README.md
-└── data/
-    └── Sample - Superstore 2019.xls
+└── requirements.txt
 ```
 
 ## How to Run
@@ -126,10 +149,10 @@ superstore-sales-analysis/
 4. Open the Jupyter Notebook.
 5. Run the cells from top to bottom.
 
-Install the main libraries with:
+Install the required libraries with:
 
 ```bash
-pip install pandas numpy matplotlib seaborn openpyxl jupyter
+pip install pandas numpy matplotlib seaborn jupyter xlrd
 ```
 
 ## What I Learned
