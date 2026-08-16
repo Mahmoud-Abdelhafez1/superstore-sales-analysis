@@ -102,6 +102,16 @@ Based on the analysis, several interesting patterns were identified:
 * **High sales do not always mean high profit.** For example, Tables generated high sales but recorded a negative total profit, while Copiers achieved both strong sales and profit.
 
 ## Visualizations
+### Dashboard Preview
+
+#### Dashboard 1
+![Dashboard 1](images/Dashboard1.png)
+
+#### Dashboard 2
+![Dashboard 2](images/Dashboard2.png)
+
+#### Dashboard 3
+![Dashboard 3](images/Dashboard3.png)
 
 Several visualizations were created using **Matplotlib** and **Seaborn** to make the analysis easier to understand.
 
